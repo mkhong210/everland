@@ -8,7 +8,7 @@ section {
 	h2{
 		transition: 1s;
 		text-align: center;
-		margin: 100px auto;
+		margin: 140px auto;
 		font-size: 5rem;
 		font-weight: bold;
 	}
@@ -431,15 +431,16 @@ html {
 
 				>strong{
 					font-size: 1.3rem;
-					margin-bottom: 50px;
+					margin-bottom: 10px;
 				}
 				>b{
 					font-size: 3rem;
+					margin-bottom: 20px;
+					font-weight: bold;
 				}
 				>p{
-					font-size: 1.3rem;
-					margin-top: 10px;
-					margin-bottom: 50px;
+					font-size: 1.6rem;
+					margin-bottom: 100px;
 				}
 				>a{
 					font-size: 2rem;
@@ -457,9 +458,10 @@ html {
 		height: 500px;
 		a{
 			font-size: 2rem;
-			border: 2px solid yellow;
+			color: white;
+			background-color: #7fcff4;
 			border-radius: 30px;
-			padding: 1%;
+			padding: 1% 2%;
 		}
 		.swiper {
 			width: 100%;
@@ -488,6 +490,11 @@ html {
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: center;
+					transform: translateY(0%);
+					transition: 1s;
+					&:hover{
+						transform: translateY(-50%);
+					}
 					> p{
 						font-size: 2rem;
 						margin-bottom: 20px;
@@ -495,28 +502,28 @@ html {
 						z-index: 100;
 					}
 					&.att1{
-						background-image: url(../asset/image/enjoy/euro_1.jpg);
+						background-image: url(../asset/image/enjoy/ENJOY_attract_thumb32.jpg);
 					}
 					&.att2{
-						background-image: url(../asset/image/enjoy/euro_2.jpg);
+						background-image: url(../asset/image/enjoy/ENJOY_attract_thumb35.jpg);
 					}
 					&.att3{
-						background-image: url(../asset/image/enjoy/zoo_1.jpg);
+						background-image: url(../asset/image/enjoy/enjoy_z_9.jpg);
 					}
 					&.att4{
-						background-image: url(../asset/image/enjoy/american_3.jpg);
+						background-image: url(../asset/image/enjoy/ENJOY_attract_thumb4.jpg);
 					}
 					&.att5{
-						background-image: url(../asset/image/enjoy/zoo_2.jpg);
+						background-image: url(../asset/image/enjoy/enjoy_z_10.jpg);
 					}
 					&.att6{
-						background-image: url(../asset/image/enjoy/american_4.jpg);
+						background-image: url(../asset/image/enjoy/ENJOY_attract_thumb5.jpg);
 					}
 					&.att7{
-						background-image: url(../asset/image/enjoy/magic_1.jpg);
+						background-image: url(../asset/image/enjoy/ENJOY_attract_thumb13.jpg);
 					}
 					&.att8{
-						background-image: url(../asset/image/enjoy/zoo_3.jpg);
+						background-image: url(../asset/image/enjoy/enjoy_z_8.jpg);
 					}
 				}
 			}
@@ -525,123 +532,122 @@ html {
 }
 
 .section5 {
-	background-color: rgb(110, 214, 255);
 	.inner{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		.grid{
-			width: 80%;
-			height: 500px;
+		flex-wrap: wrap;
+		width: 80%;
+		height: 500px;
+		gap: 30px;
+		// flex-shrink: 1;
+
+		> div{
+			background-color: rgb(245, 245, 245);
+		}
+
+		.info{
+			border-radius: 20px;
+			width: 48.5%;
 			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 20px;
-			// flex-shrink: 1;
-
-			> div{
-				background-color: rgb(245, 245, 245);
-			}
-
-			.info{
-				width: 58%;
+			height: 45%;
+			> figure{
 				display: flex;
-				height: 50%;
-				> figure{
+				justify-content: space-evenly;
+				align-items: center;
+				width: 40%;
+				img{
+					width: 100%;
+				}
+			}
+			> .infoText{
+				width: 60%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				justify-content: center;
+				p{
+					margin-left: 20%;
+					font-size: 1.6rem;
+					margin-bottom: 10px;
+					&:nth-of-type(1){}
+					&:nth-of-type(2){}
+					&:nth-of-type(3){
+						margin-top: 10px;
+						font-size: 3rem;
+					}
+					&:nth-of-type(4){
+						font-size: 4rem;
+						font-weight: 800;
+					}
+				}	
+			}
+		}
+
+		.weather{
+			border-radius: 20px;
+			width: 48.5%;
+			height: 45%;
+			.wInner{
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.weatherIcon{
+					background-color: rgb(206, 206, 206);
 					display: flex;
-					justify-content: space-evenly;
+					justify-content: center;
 					align-items: center;
-					width: 40%;
+					width: 100px;
+					height: 100px;
+					border-radius: 100%;
+					margin: 0 5%;
 					img{
-						width: 100%;
+						width: 50%;
 					}
 				}
-				> .infoText{
+				.weatherText{
 					width: 60%;
 					display: flex;
 					flex-direction: column;
-					align-items: start;
-					justify-content: center;
-					p{
-						margin-left: 20%;
-						font-size: 1.6rem;
+					span{
+						font-size: 1.2rem;
 						margin-bottom: 10px;
-						&:nth-of-type(1){}
-						&:nth-of-type(2){}
-						&:nth-of-type(3){
-							margin-top: 10px;
-							font-size: 3rem;
+						&.wText1{
+							font-size: 2rem;
 						}
-						&:nth-of-type(4){
-							font-size: 4rem;
-							font-weight: 800;
+						&.wText2{
+							font-size: 2rem;
 						}
-					}	
-				}
-			}
-
-			.weather{
-				width: 38%;
-				height: 50%;
-				.inner{
-					height: 100%;
-					width: 100%;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					.weatherIcon{
-						background-color: rgb(206, 206, 206);
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 100px;
-						height: 100px;
-						border-radius: 100%;
-						margin: 0 5%;
-						img{
-							width: 50%;
+						&.wText3{
+							font-size: 2rem;
 						}
-					}
-					.weatherText{
-						width: 60%;
-						display: flex;
-						flex-direction: column;
-						span{
-							font-size: 1.2rem;
-							margin-bottom: 10px;
-							&.wText1{
-								font-size: 2rem;
-							}
-							&.wText2{
-								font-size: 2rem;
-							}
-							&.wText3{
-								font-size: 2rem;
-							}
-							&.wText4{}
-							&.wText5{}
-						}
+						&.wText4{}
+						&.wText5{}
 					}
 				}
 			}
+		}
 
-			.list{
-				width: 48%;
-				height: 40%;
-				background-image: url(../asset/image/main/sec5_youtube.png);
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-			}
+		.list{
+			border-radius: 20px;
+			width: 48.5%;
+			height: 45%;
+			background-image: url(../asset/image/main/sec5_youtube.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
 
-			.pic{
-				width: 48%;
-				height: 40%;
-				background-image: url(../asset/image/main/sec5_app.png);
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center;
-			}
+		.pic{
+			border-radius: 20px;
+			width: 48.5%;
+			height: 45%;
+			background-image: url(../asset/image/main/sec5_app.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
 		}
 	}
 }
