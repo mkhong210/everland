@@ -1,49 +1,45 @@
 // header & footer
-$('body .header_sub').load('../../common/header.html .header_sub>.inner_h');
+$('body .header_sub').load('../../common/header.html #header_sub>.inner_h');
 $('.sub_common').load('../../common/header.html .sub_common');
 $('body footer').load('../../common/footer.html footer>.inner_c');
 
-$(window).on("load", function(){
+$(document).ready(function(){
 	let url = window.location.pathname;
-	// console.log(url);
-
-	setTimeout(() => {
-		// sub_common
-		// depth01 리스트 부분
-		$(".header_sub .gnb > li > a").each(function() {
-			let title = $(this).text(); // depth01 타이틀
-			let link = $(this).attr('href'); // depth01 링크
-			$('.sub_common .sub_tab .depth01 ul').append('<li><a href="' + link + '">' + title + '</a></li>');
-		});
-		// sub_common 텍스트
-		$(".header_sub .gnb li ul li a").each(function() {
-			if ( $(this).attr("href") == url ){
-				let idx = $(this).parent().parent().parent().index();
-				let title = $(this).parent().parent().parent().find('>a').text(); // depth01 타이틀
-				let depth02 = $(this).parent().parent().html(); // depth02
-				let this_tit = $(this).text(); // 현재페이지 타이틀
-				
-				$('.sub_common .sub_visual').css("background-image", "url('../../asset/common/image/sub_visual" + idx + ".jpg')");
-				$('.sub_common .sub_visual .txt_box h2').html( title );
-				$('.sub_common .sub_tab .depth01 p span').html( title );
-				$('.sub_common .sub_tab .depth02 p span').html( this_tit );
-				$('.sub_common .sub_tab .depth02 ul').append(depth02);
-			}
-		});
 	
-		// sub_tab 열기,닫기
-		$(".sub_common .sub_tab .inner_c > div > p").click(function(){
-			if ( $(this).next("ul").css("display") == "none" ){
-				$(this).parent().addClass("on").siblings().removeClass("on");
-				$(this).next("ul").slideDown("fast").parent().siblings().find("> ul").slideUp("fast");
-			} else {
-				$(this).parent().removeClass('on');
-				$(this).parent().find(">ul").slideUp("fast");
-			}
-		});
-		
+	// sub_common
+	// depth01 리스트 부분
+	$("#header_sub .gnb > li > a").each(function() {
+		let title = $(this).text(); // depth01 타이틀
+		let link = $(this).attr('href'); // depth01 링크
+		$('.sub_common .sub_tab .depth01 ul').append('<li><a href="' + link + '">' + title + '</a></li>');
+	});
+	// sub_common 텍스트
+	$("#header_sub .gnb li ul li a").each(function() {
+		if ( $(this).attr("href") == url ){
+			let idx = $(this).parent().parent().parent().index();
+			let title = $(this).parent().parent().parent().find('>a').text(); // depth01 타이틀
+			let depth02 = $(this).parent().parent().html(); // depth02
+			let this_tit = $(this).text(); // 현재페이지 타이틀
+			
+			$('.sub_common .sub_visual').css("background-image", "url('/img/sub_visual" + idx + ".jpg')");
+			$('.sub_common .sub_visual .txt_box h2').html( title );
+			$('.sub_common .sub_tab .depth01 p span').html( title );
+			$('.sub_common .sub_tab .depth02 p span').html( this_tit );
+			$('.sub_common .sub_tab .depth02 ul').append(depth02);
+		}
+	});
 
-	}, 100);
+	// sub_tab 열기,닫기
+	$(".sub_common .sub_tab .inner_c > div > p").click(function(){
+		if ( $(this).next("ul").css("display") == "none" ){
+			$(this).parent().addClass("on").siblings().removeClass("on");
+			$(this).next("ul").slideDown("fast").parent().siblings().find("> ul").slideUp("fast");
+		} else {
+			$(this).parent().removeClass('on');
+			$(this).parent().find(">ul").slideUp("fast");
+		}
+	});
+	
 });
 
 // const menu = document.querySelectorAll('.gnb li');
@@ -76,13 +72,3 @@ function menuClick(_this) {
 		open.removeClass('open');
 	}
 }
-
-// slide up btn
-const ArrowBttn = document.querySelector('.arrow');
-
-ArrowBttn.addEventListener("click", function() {
-	window.scrollTo({
-		top:0,
-		behavior:"smooth"
-	})
-})

@@ -1,0 +1,27 @@
+.homeBox {
+  text-align: center;
+  font-style: none;
+  margin: 10%;
+}
+.homeBox > a {
+  border: 1px solid black;
+  margin: 0% 10%;
+  padding: 5%;
+  text-decoration: none;
+  color: black;
+}
+
+.homeDiv {
+  color: blue;
+  font-size: 100px;
+  text-align: center;
+}
+.homeDiv > img {
+  width: 100%;
+}
+
+.productDiv {
+  color: pink;
+  font-size: 100px;
+  text-align: center;
+}

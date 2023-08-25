@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <header id="header">
+    <ul class="gnb">
+      <li>
+        <a href="/pages/use/news.html">뉴스</a>
+        <ul class="depth02">
+          <li><a href="/pages/use/news.html">뉴스1</a></li>
+          <li><a href="javascript:;">뉴스2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/pages/use/notice.html">공지사항</a>
+        <ul class="depth02">
+          <li><a href="/pages/use/notice.html">공지사항1</a></li>
+          <li><a href="javascript:;">공지사항2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+  <div class="sub_common">
+    <div class="sub_visual">   <!-- sub_visual00, 01, 02, 03 ... -->
+      <div class="txt_box">
+        <h2></h2>
+        <p class="mont"></p>
+      </div>
+    </div>
+    <div class="sub_tab_blank"></div>
+    <div class="sub_tab">
+      <div class="inner">
+        <div class="home"><a href="/">홈</a></div>
+        <div class="depth01">
+          <p><span></span></p>
+          <ul></ul>
+        </div>
+        <div class="depth02">
+          <p><span></span></p>
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      var url = window.location.pathname;
+      
+      // sub_common
+      // depth01 리스트 부분
+      $("#header .gnb > li > a").each(function() {
+        var title = $(this).text(); // depth01 타이틀
+        var link = $(this).attr('href'); // depth01 링크
+        $('.sub_common .sub_tab .depth01 ul').append('<li><a href="' + link + '">' + title + '</a></li>');
+      });
+      // sub_common 텍스트
+      $("#header .gnb li ul li a").each(function() {
+        if ( $(this).attr("href") == url ){
+          var idx = $(this).parent().parent().parent().index();
+          var title = $(this).parent().parent().parent().find('>a').text(); // depth01 타이틀
+          var desc = $(this).parent().parent().parent().find('>a').data("desc"); // depth01 추가 텍스트
+          var depth02 = $(this).parent().parent().html(); // depth02
+          var this_tit = $(this).text(); // 현재페이지 타이틀
+  
+          $('.sub_common .sub_visual').css("background-image", "url('/img/sub_visual" + idx + ".jpg')");
+          $('.sub_common .sub_visual .txt_box h2').html( title );
+          $('.sub_common .sub_visual .txt_box p').text( desc );
+          $('.sub_common .sub_tab .depth01 p span').html( title );
+          $('.sub_common .sub_tab .depth02 p span').html( this_tit );
+          $('.sub_common .sub_tab .depth02 ul').append(depth02);
+        }
+      });
+  
+      // sub_tab 열기,닫기
+      $(".sub_common .sub_tab .inner > div > p").click(function(){
+        if ( $(this).next("ul").css("display") == "none" ){
+          $(this).parent().addClass("on").siblings().removeClass("on");
+          $(this).next("ul").slideDown("fast").parent().siblings().find("> ul").slideUp("fast");
+  
+        } else {
+          $(this).parent().removeClass('on');
+          $(this).parent().find(">ul").slideUp("fast");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
