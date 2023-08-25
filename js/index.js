@@ -8,10 +8,12 @@ new fullpage('#fullpage', {
             }
 
 		if (destination.index != 0) {
-			$(".gnb > li > a").removeClass("active");
-		} else {
-			$(".gnb > li > a").addClass("active");
-			}
+                $(".gnb > li > a").removeClass("active");
+                $(".gnb_right").removeClass("active");
+            } else {
+                $(".gnb > li > a").addClass("active");
+                $(".gnb_right").addClass("active");
+            }
 
         $(".section.active").find(".inner .main_title").addClass("active");
         $(".section.active").find(".inner .promotion-contents").addClass("active");
@@ -45,8 +47,10 @@ var swiper = new Swiper(".sec1Swiper", {
             var currentSlideIndex = e.activeIndex;
             if (currentSlideIndex == 3 || currentSlideIndex == 4) {
                 $(".gnb > li > a").addClass("active");
+                $(".gnb_right").addClass("active");
             } else {
                 $(".gnb > li > a").removeClass("active");
+                $(".gnb_right").removeClass("active");
             }			
         }
     }
