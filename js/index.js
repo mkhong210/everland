@@ -187,9 +187,8 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?s
     const tmx = data.response.body.items.item[120].fcstValue;
 
     function submitRainy() {
-        wText2.innerText = `강수확률${rainy}%`
-        wText4.innerText = `최저${tmn}°C`
-        wText5.innerText = `최고${tmx}°C`
+        wText2.innerText = `강수확률 ${rainy}%`
+        wText4.innerText = `최저${tmn}°C / 최고${tmx}°C`
         
     }
     setInterval(submitRainy, 500);

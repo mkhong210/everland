@@ -8,7 +8,7 @@ section {
 	h2{
 		transition: 1s;
 		text-align: center;
-		margin: 140px auto;
+		margin: 100px auto;
 		font-size: 5rem;
 		font-weight: bold;
 	}
@@ -224,12 +224,14 @@ html {
 			margin: 7% 0%;
 			strong{
 				font-size: 5rem;
+				font-weight: bold;
 				transition: 1s;
 				transform: translateY(100%);
 				opacity: 0%;
 			}
 			p{
 				margin: 5% 0;
+				line-height: 1.5;
 				font-size: 1.7rem;
 				transition: 1s;
 				transform: translateY(100%);
@@ -369,7 +371,7 @@ html {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.322);
 			z-index: 100;
 		}
 	}
@@ -377,7 +379,6 @@ html {
 		.filter{
 			&.active{
 				&::after{
-					background-color: rgba(0, 0, 0, 0.322);
 				}
 			}	
 		}
@@ -493,7 +494,7 @@ html {
 					transform: translateY(0%);
 					transition: 1s;
 					&:hover{
-						transform: translateY(-50%);
+						transform: translateY(-30%);
 					}
 					> p{
 						font-size: 2rem;
@@ -595,12 +596,12 @@ html {
 				justify-content: center;
 				align-items: center;
 				.weatherIcon{
-					background-color: rgb(206, 206, 206);
+					background-color: rgb(255, 255, 255);
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 100px;
-					height: 100px;
+					width: 130px;
+					height: 130px;
 					border-radius: 100%;
 					margin: 0 5%;
 					img{
@@ -608,14 +609,15 @@ html {
 					}
 				}
 				.weatherText{
-					width: 60%;
+					width: 40%;
 					display: flex;
 					flex-direction: column;
 					span{
 						font-size: 1.2rem;
 						margin-bottom: 10px;
 						&.wText1{
-							font-size: 2rem;
+							font-size: 4rem;
+							margin-bottom: 20px;
 						}
 						&.wText2{
 							font-size: 2rem;
