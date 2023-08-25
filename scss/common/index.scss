@@ -533,18 +533,24 @@ html {
 }
 
 .section5 {
+	background-color: #7FCFF4;
 	.inner{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		width: 80%;
-		height: 500px;
-		gap: 30px;
 		// flex-shrink: 1;
+		> .grid{
+			height: 600px;
+			width: 100%;
+			gap: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
 
 		> div{
-			background-color: rgb(245, 245, 245);
+			background-color: rgb(255, 255, 255);
 		}
 
 		.info{
@@ -596,12 +602,12 @@ html {
 				justify-content: center;
 				align-items: center;
 				.weatherIcon{
-					background-color: rgb(255, 255, 255);
+					background-color: #ffffff;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 130px;
-					height: 130px;
+					width: 230px;
+					height: 230px;
 					border-radius: 100%;
 					margin: 0 5%;
 					img{
@@ -616,6 +622,7 @@ html {
 						font-size: 1.2rem;
 						margin-bottom: 10px;
 						&.wText1{
+							font-weight: bold;
 							font-size: 4rem;
 							margin-bottom: 20px;
 						}
@@ -651,5 +658,6 @@ html {
 			background-size: cover;
 			background-position: center;
 		}
+	}
 	}
 }
