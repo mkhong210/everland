@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js" integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh" crossorigin="anonymous"></script>
+    <script>
+        Kakao.init('647e5d4eca26ea4df7ba83ca043a166f'); // 사용하려는 앱의 JavaScript 키 입력
+        Kakao.isInitialized();
+        console.log(Kakao.isInitialized());
+    </script>
+
+</head>
+<body>
+    <div class="testDiv"></div>
+    <div class="testDiv2"></div>
+    <div class="testDiv3"></div>
+    <div class="testDiv4">질문들</div>
+    <div class="testDiv5">답변들</div>
+    <input type="text">
+    <input type="text">p
+
+
+    <style>
+        div{
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+    
+      <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+        <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222"
+          alt="카카오 로그인 버튼" />
+      </a>
+      <p id="token-result"></p>
+      
+    <script>
+        function loginWithKakao() {
+          Kakao.Auth.authorize({
+            redirectUri: 'https://developers.kakao.com/tool/oauth',
+          });
+        }
+        
+        displayToken()
+        function displayToken() {
+            var token = getCookie('authorize-access-token');
+
+            if(token) {
+            Kakao.Auth.setAccessToken(token);
+            Kakao.Auth.getStatusInfo()
+                .then(function(res) {
+                if (res.status === 'connected') {
+                    document.getElementById('token-result').innerText
+                    = 'login success, token: ' + Kakao.Auth.getAccessToken();
+                }
+                })
+                .catch(function(err) {
+                Kakao.Auth.setAccessToken(null);
+                });
+            }
+        }
+
+        function getCookie(name) {
+            var parts = document.cookie.split(name + '=');
+            if (parts.length === 2) { return parts[1].split(';')[0]; }
+        }
+    </script>
+
+</body>
+</html>

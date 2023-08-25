@@ -3,17 +3,14 @@ new fullpage('#fullpage', {
 		console.log(destination.index)
         if (destination.index == 0) {
                 $("header").addClass("active");
-            } else {
-                $("header").removeClass("active");
-            }
-
-		if (destination.index != 0) {
-                $(".gnb > li > a").removeClass("active");
-                $(".gnb_right").removeClass("active");
-            } else {
                 $(".gnb > li > a").addClass("active");
                 $(".gnb_right").addClass("active");
+            } else {
+                $("header").removeClass("active");
+                $(".gnb > li > a").removeClass("active");
+                $(".gnb_right").removeClass("active");
             }
+
 
         $(".section.active").find(".inner .main_title").addClass("active");
         $(".section.active").find(".inner .promotion-contents").addClass("active");
@@ -45,13 +42,13 @@ var swiper = new Swiper(".sec1Swiper", {
         },
         slideChange: function(e) {
             var currentSlideIndex = e.activeIndex;
-            if (currentSlideIndex == 3 || currentSlideIndex == 4) {
-                $(".gnb > li > a").addClass("active");
-                $(".gnb_right").addClass("active");
-            } else {
-                $(".gnb > li > a").removeClass("active");
-                $(".gnb_right").removeClass("active");
-            }			
+            // if (currentSlideIndex == 3 || currentSlideIndex == 4) {
+            //     $(".gnb > li > a").addClass("active");
+            //     $(".gnb_right").addClass("active");
+            // } else {
+            //     $(".gnb > li > a").removeClass("active");
+            //     $(".gnb_right").removeClass("active");
+            // }			
         }
     }
 });
@@ -62,6 +59,9 @@ var swiper = new Swiper(".sec2Swiper", {
     spaceBetween: 20,
     loop: true,
     speed: 800,
+    autoplay: {
+        delay: 5000, // 5초마다 슬라이드 전환
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -78,6 +78,9 @@ var swiper = new Swiper(".sec4Swiper", {
     spaceBetween: 30,
     loop: true,
     speed: 800,
+    autoplay: {
+        delay: 5000, // 5초마다 슬라이드 전환
+    },
     loopAdditionalSlides : 4,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -109,7 +112,6 @@ const wText1 = document.querySelector(".wText1");
 const wText2 = document.querySelector(".wText2");
 const wText3 = document.querySelector(".wText3");
 const wText4 = document.querySelector(".wText4");
-const wText5 = document.querySelector(".wText5");
 const dateTag = document.querySelector(".section5 .info div p:nth-of-type(1)")
 
 

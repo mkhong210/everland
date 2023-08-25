@@ -860,6 +860,9 @@ html {
 }
 
 .section4 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
 }
 .section4 .inner {
@@ -936,98 +939,108 @@ html {
   background-image: url(../asset/image/enjoy/enjoy_z_8.jpg);
 }
 
+.section5 {
+  background-color: #7FCFF4;
+}
 .section5 .inner {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 80%;
-  height: 500px;
+}
+.section5 .inner > .grid {
+  height: 600px;
+  width: 100%;
   gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.section5 .inner > div {
-  background-color: rgb(245, 245, 245);
+.section5 .inner > .grid > div {
+  background-color: rgb(255, 255, 255);
 }
-.section5 .inner .info {
+.section5 .inner > .grid .info {
   border-radius: 20px;
   width: 48.5%;
   display: flex;
   height: 45%;
 }
-.section5 .inner .info > figure {
+.section5 .inner > .grid .info > figure {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 40%;
 }
-.section5 .inner .info > figure img {
+.section5 .inner > .grid .info > figure img {
   width: 100%;
 }
-.section5 .inner .info > .infoText {
+.section5 .inner > .grid .info > .infoText {
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
 }
-.section5 .inner .info > .infoText p {
+.section5 .inner > .grid .info > .infoText p {
   margin-left: 20%;
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
-.section5 .inner .info > .infoText p:nth-of-type(3) {
+.section5 .inner > .grid .info > .infoText p:nth-of-type(3) {
   margin-top: 10px;
   font-size: 3rem;
 }
-.section5 .inner .info > .infoText p:nth-of-type(4) {
+.section5 .inner > .grid .info > .infoText p:nth-of-type(4) {
   font-size: 4rem;
   font-weight: 800;
 }
-.section5 .inner .weather {
+.section5 .inner > .grid .weather {
   border-radius: 20px;
   width: 48.5%;
   height: 45%;
 }
-.section5 .inner .weather .wInner {
+.section5 .inner > .grid .weather .wInner {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.section5 .inner .weather .wInner .weatherIcon {
-  background-color: rgb(255, 255, 255);
+.section5 .inner > .grid .weather .wInner .weatherIcon {
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 130px;
-  height: 130px;
+  width: 230px;
+  height: 230px;
   border-radius: 100%;
   margin: 0 5%;
 }
-.section5 .inner .weather .wInner .weatherIcon img {
+.section5 .inner > .grid .weather .wInner .weatherIcon img {
   width: 50%;
 }
-.section5 .inner .weather .wInner .weatherText {
+.section5 .inner > .grid .weather .wInner .weatherText {
   width: 40%;
   display: flex;
   flex-direction: column;
 }
-.section5 .inner .weather .wInner .weatherText span {
+.section5 .inner > .grid .weather .wInner .weatherText span {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-.section5 .inner .weather .wInner .weatherText span.wText1 {
+.section5 .inner > .grid .weather .wInner .weatherText span.wText1 {
+  font-weight: bold;
   font-size: 4rem;
   margin-bottom: 20px;
 }
-.section5 .inner .weather .wInner .weatherText span.wText2 {
+.section5 .inner > .grid .weather .wInner .weatherText span.wText2 {
   font-size: 2rem;
 }
-.section5 .inner .weather .wInner .weatherText span.wText3 {
+.section5 .inner > .grid .weather .wInner .weatherText span.wText3 {
   font-size: 2rem;
 }
-.section5 .inner .list {
+.section5 .inner > .grid .list {
   border-radius: 20px;
   width: 48.5%;
   height: 45%;
@@ -1036,7 +1049,7 @@ html {
   background-position: center;
   background-size: cover;
 }
-.section5 .inner .pic {
+.section5 .inner > .grid .pic {
   border-radius: 20px;
   width: 48.5%;
   height: 45%;

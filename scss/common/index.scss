@@ -453,6 +453,10 @@ html {
 
 
 .section4 {
+	// background-image: url(../../asset/image/main/sec4_thumb.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	overflow: hidden;
 	.inner {
 		text-align: center;
