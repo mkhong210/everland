@@ -3,17 +3,14 @@ new fullpage('#fullpage', {
 		console.log(destination.index)
         if (destination.index == 0) {
                 $("header").addClass("active");
-            } else {
-                $("header").removeClass("active");
-            }
-
-		if (destination.index != 0) {
-                $(".gnb > li > a").removeClass("active");
-                $(".gnb_right").removeClass("active");
-            } else {
                 $(".gnb > li > a").addClass("active");
                 $(".gnb_right").addClass("active");
+            } else {
+                $("header").removeClass("active");
+                $(".gnb > li > a").removeClass("active");
+                $(".gnb_right").removeClass("active");
             }
+
 
         $(".section.active").find(".inner .main_title").addClass("active");
         $(".section.active").find(".inner .promotion-contents").addClass("active");
@@ -45,13 +42,13 @@ var swiper = new Swiper(".sec1Swiper", {
         },
         slideChange: function(e) {
             var currentSlideIndex = e.activeIndex;
-            if (currentSlideIndex == 3 || currentSlideIndex == 4) {
-                $(".gnb > li > a").addClass("active");
-                $(".gnb_right").addClass("active");
-            } else {
-                $(".gnb > li > a").removeClass("active");
-                $(".gnb_right").removeClass("active");
-            }			
+            // if (currentSlideIndex == 3 || currentSlideIndex == 4) {
+            //     $(".gnb > li > a").addClass("active");
+            //     $(".gnb_right").addClass("active");
+            // } else {
+            //     $(".gnb > li > a").removeClass("active");
+            //     $(".gnb_right").removeClass("active");
+            // }			
         }
     }
 });
@@ -62,13 +59,31 @@ var swiper = new Swiper(".sec2Swiper", {
     spaceBetween: 20,
     loop: true,
     speed: 800,
+    centeredSlides: true,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        480: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        }
+    },
+    autoplay: {
+        delay: 5000, // 5초마다 슬라이드 전환
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
     scrollbar: {
     el: ".swiper-scrollbar",
-    hide: false,
+    hide: true,
     },
 });
 
@@ -78,6 +93,28 @@ var swiper = new Swiper(".sec4Swiper", {
     spaceBetween: 30,
     loop: true,
     speed: 800,
+    breakpoints: {
+        // 화면 폭이 768px 이상일 때
+        0: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        380: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
+        1200: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        }
+    },
+    autoplay: {
+        delay: 5000, // 5초마다 슬라이드 전환
+    },
     loopAdditionalSlides : 4,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -109,7 +146,6 @@ const wText1 = document.querySelector(".wText1");
 const wText2 = document.querySelector(".wText2");
 const wText3 = document.querySelector(".wText3");
 const wText4 = document.querySelector(".wText4");
-const wText5 = document.querySelector(".wText5");
 const dateTag = document.querySelector(".section5 .info div p:nth-of-type(1)")
 
 
@@ -139,7 +175,7 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst
     //         default : wText2.innerText = "일시적으로 불러올 수 없습니다.";
     //     }
     // }
-    // setInterval(submitSky, 500);
+    // setInterval(submitSky, 3000);
 })
 
 
@@ -175,7 +211,7 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst
             default : wText3.innerText = `날씨 불러올 수 없음`;
         }
     }
-    setInterval(submitTemp, 500);
+    setInterval(submitTemp, 3000);
 }
 )
 
@@ -187,12 +223,11 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?s
     const tmx = data.response.body.items.item[120].fcstValue;
 
     function submitRainy() {
-        wText2.innerText = `강수확률${rainy}%`
-        wText4.innerText = `최저${tmn}°C`
-        wText5.innerText = `최고${tmx}°C`
+        wText2.innerText = `강수확률 ${rainy}%`
+        wText4.innerText = `최저${tmn}°C / 최고${tmx}°C`
         
     }
-    setInterval(submitRainy, 500);
+    setInterval(submitRainy, 3000);
 })
 
 

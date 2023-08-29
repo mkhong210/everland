@@ -1,0 +1,64 @@
+@mixin reset {
+    margin:0;
+    padding:0;
+    @content;
+}
+
+@mixin flex($a1: space-evenly, $a2: center){
+    display: flex;
+    justify-content: $a1;
+    align-items: $a2;
+    @content;
+}
+
+@mixin inBl($a1: inline-block, $a2: middle){
+    display: $a1;
+    vertical-align: $a2;
+    @content;
+}
+
+@mixin bgSttin($a1: center, $a2: no-repeat, $a3: cover){
+    background-position: $a1;
+    background-repeat: $a2;
+    background-size: $a3;
+    @content;
+}
+
+@mixin trnl($v1, $v2){
+    transform: translate(#{$v1}px, #{$v2}px);
+    @content;
+}
+
+
+@mixin rot($v1){
+    transform: rotate(#{$v1}deg);
+    @content;
+}
+
+@mixin font($a1: 400, $a2: 16px){
+    font-weight: $a1;
+    font-size: $a2;
+    @content;
+}
+
+@mixin flex($jc:flex-start, $ai:center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+	@content;
+}
+
+@mixin posi($p:relative, $t:0, $l:0) {
+	position: $p;
+	top: $t;
+	left: $l;
+	@content;
+}
+
+// undefined
+@mixin posibr($pb:relative, $tb:0, $lb:0) {
+	position: $pb;
+	bottom: $tb;
+	right: $lb;
+	@content;
+}
