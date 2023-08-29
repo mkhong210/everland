@@ -1,0 +1,25 @@
+@import "_reset";
+
+.header_sub{
+    background-color: #dbdbdb;
+}
+
+.gnb_right{
+    display: none;
+}
+
+.loginBox{
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.gLoginBttn{
+	background-color: rgb(0, 119, 255);
+	margin-top: 100px;
+	padding: 10px 50px;
+	font-size: 2rem;
+	border-radius: 10px;
+}

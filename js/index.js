@@ -59,6 +59,21 @@ var swiper = new Swiper(".sec2Swiper", {
     spaceBetween: 20,
     loop: true,
     speed: 800,
+    centeredSlides: true,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        480: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        }
+    },
     autoplay: {
         delay: 5000, // 5초마다 슬라이드 전환
     },
@@ -68,7 +83,7 @@ var swiper = new Swiper(".sec2Swiper", {
     },
     scrollbar: {
     el: ".swiper-scrollbar",
-    hide: false,
+    hide: true,
     },
 });
 
@@ -78,6 +93,25 @@ var swiper = new Swiper(".sec4Swiper", {
     spaceBetween: 30,
     loop: true,
     speed: 800,
+    breakpoints: {
+        // 화면 폭이 768px 이상일 때
+        0: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        380: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
+        1200: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        }
+    },
     autoplay: {
         delay: 5000, // 5초마다 슬라이드 전환
     },
@@ -141,7 +175,7 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst
     //         default : wText2.innerText = "일시적으로 불러올 수 없습니다.";
     //     }
     // }
-    // setInterval(submitSky, 500);
+    // setInterval(submitSky, 3000);
 })
 
 
@@ -177,7 +211,7 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst
             default : wText3.innerText = `날씨 불러올 수 없음`;
         }
     }
-    setInterval(submitTemp, 500);
+    setInterval(submitTemp, 3000);
 }
 )
 
@@ -193,7 +227,7 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?s
         wText4.innerText = `최저${tmn}°C / 최고${tmx}°C`
         
     }
-    setInterval(submitRainy, 500);
+    setInterval(submitRainy, 3000);
 })
 
 

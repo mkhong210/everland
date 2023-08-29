@@ -1,7 +1,8 @@
 // header & footer
 $('body .header_sub').load('./common/header.html #header_sub>.inner_h');
+$('body .header_sub').load('../../common/header.html #header_sub>.inner_h');
 $('.sub_common').load('./common/header.html .sub_common');
-$('body footer').load('./common/footer.html footer>.inner_c');
+$('body footer').load('../../common/footer.html footer>.inner_c');
 
 $(document).ready(function(){
 	let url = window.location.pathname;

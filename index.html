@@ -76,7 +76,7 @@
 				<div class="main_title">
 					<strong>신규 즐길거리</strong>
 					<p>에버랜드에서 즐길 수 있는<br>새로운 즐길거리를 확인해 보세요</p>
-					<div class="pagenationBox">
+					<div class="paginationBox">
 						<div class="swiper-button-next"></div>
 						<div class="swiper-button-prev"></div>	
 					</div>	
@@ -130,25 +130,25 @@
 						<strong>제휴카드</strong>
 						<b>스마트 예약</b>
 						<p>본인 54%</p>
-						<a href="javascript:;"><i class="fa-solid fa-circle-plus" style="color: #333333; font-size: 30px;"></i></i></a>
+						<a href="javascript:;"><i class="fa-solid fa-circle-plus"></i></i></a>
 					</div>
 					<div class="pages content2">
 						<strong>모니모 신규 가입 시</strong>
 						<b>전용 페이지</b>
 						<p>대인 54%</p>
-						<a><i class="fa-solid fa-circle-plus" style="color: #333333; font-size: 30px;"></i></i></a>
+						<a><i class="fa-solid fa-circle-plus"></i></i></a>
 					</div>
 					<div class="pages content3">
 						<strong>키즈 패키지 2인</strong>
 						<b>스마트 예약/현장</b>
 						<p>대인+소인</p>
-						<a><i class="fa-solid fa-circle-plus" style="color: #333333; font-size: 30px;"></i></i></a>
+						<a><i class="fa-solid fa-circle-plus"></i></i></a>
 					</div>
 					<div class="pages content4">
 						<strong>제휴카드</strong>
 						<b>현장 결제</b>
 						<p>50% 우대</p>
-						<a><i class="fa-solid fa-circle-plus" style="color: #333333; font-size: 30px;"></i></i></a>
+						<a><i class="fa-solid fa-circle-plus"></i></i></a>
 					</div>
 				</div>
 			</div>
@@ -190,6 +190,7 @@
 		</section>
 
 		<section class="section section5">
+			<div class="sec5Filter"></div>
 			<h2>에버랜드 소식</h2>
 			<div class="inner">
 				<div class="grid">
@@ -200,7 +201,7 @@
 							<p>운영시간</p>
 							<p>10:00 ~ 22:00</p>
 						</div>
-						<figure><img src="./asset/image/main/main_lions.png" alt=""></figure>
+						<figure><img src="./asset/image/main/main_sec5_ani.gif" alt=""></figure>
 					</div>
 					<div class="weather">
 						<div class="wInner">
@@ -220,5 +221,29 @@
 		</section>
 		<footer id="footer-section" class="section"></footer>
 	</div>
+
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type="text/javascript">
+        Kakao.init('6c7c766a0696905f395ca5e542a55865');
+
+        function kakaoLogout() {
+            let msg = confirm('로그아웃할까용?');
+            if(msg){
+                if (Kakao.Auth.getAccessToken()) {
+                Kakao.API.request({
+                    url: '/v1/user/unlink',
+                    success: function (response) {
+                        console.log(response)
+                    },
+                    fail: function (error) {
+                        console.log(error)
+                    },
+                })
+                Kakao.Auth.setAccessToken(undefined)
+                }
+            }
+        }  
+    </script>
+
 </body>
 </html>
