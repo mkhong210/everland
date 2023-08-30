@@ -11,7 +11,6 @@ new fullpage('#fullpage', {
                 $(".gnb_right").removeClass("active");
             }
 
-
         $(".section.active").find(".inner .main_title").addClass("active");
         $(".section.active").find(".inner .promotion-contents").addClass("active");
         $(".section.active").find("h2").addClass("active");
@@ -191,22 +190,26 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst
         switch(weather) {
             case "0" : 
             wText3.innerText = `현재 하늘 맑음`;
-            weatherIcon.src = "../asset/image/main/weather_sun.png";
+            weatherIcon.src = "./asset/image/main/weather_sun.png";
             break;
+
             case "1" : 
             wText3.innerText = `현재 비 옴`;
-            weatherIcon.src = "../asset/image/main/weather_rainy.png";
+            weatherIcon.src = "./asset/image/main/weather_rainy.png";
             break;
+
             // case "2" : wText5.innerText = `현재 비와 눈 옴`; break;
             // case "3" : wText5.innerText = `현재 눈 옴`; break;
             case "5" : 
             wText3.innerText = "현재 하늘 흐림⛅";
-            weatherIcon.src = "../asset/image/main/weather_tinyCloud.png";
+            weatherIcon.src = "./asset/image/main/weather_tinyCloud.png";
             break;
+
             case "6" :
             wText3.innerText = `현재 바람 주의`;
-            weatherIcon.src = "../asset/image/main/weather_windy.png";
+            weatherIcon.src = "./asset/image/main/weather_windy.png";
             break;
+
             // case "7" : wText5.innerText = `현재 눈`; break;
             default : wText3.innerText = `날씨 불러올 수 없음`;
         }
@@ -223,7 +226,7 @@ fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?s
     const tmx = data.response.body.items.item[120].fcstValue;
 
     function submitRainy() {
-        wText2.innerText = `강수확률 ${rainy}%`
+        wText2.innerText = `오늘의 강수확률 ${rainy}%`
         wText4.innerText = `최저${tmn}°C / 최고${tmx}°C`
         
     }
