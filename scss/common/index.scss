@@ -23,9 +23,14 @@ html {
 	}
 }
 
+.mainTexts{
+	>strong{
+		line-height: 1.2;
+	}
+}
 section {
 	h2{
-		transition: 1s;
+		transition: 0.8s;
 		text-align: center;
 		margin: 100px auto;
 		font-size: 5rem;
@@ -42,17 +47,19 @@ section {
 	left: 0;
 	width: 100%;
 	background-color: rgb(255, 255, 255);
-	transition: 0.55s;
+	transition: 0.8.55s;
 	
 	&.active {
 		background-color: transparent;
 	}
 }
 
+
 #footer-section {
 	height: 300px;
 	/* 또는 적절한 높이 값 */
 }
+
 
 .section1 {
 	.swiper {
@@ -110,7 +117,7 @@ section {
 					justify-content: center;
 					align-items: start;
 					p{
-						transition: 1s;
+						transition: 0.8s;
 						transform: translateY(100%);
 						opacity: 0%;
 						margin-bottom: 20px;
@@ -118,7 +125,7 @@ section {
 						font-weight: 400;
 					}
 					strong{
-						transition: 1s;
+						transition: 0.8s;
 						transform: translateY(100%);
 						opacity: 0%;
 						margin-bottom: 80px;
@@ -127,7 +134,7 @@ section {
 					}
 					button{
 						opacity: 0%;
-						transition: 1s;
+						transition: 0.8s;
 						width: 200px;
 						font-size:  2rem;
 						border-radius: 30px;
@@ -144,7 +151,8 @@ section {
 							color: white;
 						}
 						button{
-							background-color: rgb(238, 238, 238);
+							color: #333333;
+							background-color: rgb(255, 255, 255);
 						}
 					}
 					&.text2{
@@ -155,8 +163,8 @@ section {
 							color: rgb(0, 0, 0);
 						}
 						button{
-							background-color: rgb(0, 105, 9);
-							color: white;
+							background-color: rgb(255, 255, 255);
+							color: #333333;
 						}
 					}
 					&.text3{
@@ -167,7 +175,8 @@ section {
 							color: white;
 						}
 						button{
-							background-color: rgb(255, 187, 255);
+							color: #333333;
+							background-color: rgb(255, 255, 255);
 						}	
 					}
 					&.text4{
@@ -178,8 +187,8 @@ section {
 							color: white;
 						}
 						button{
-							background-color: rgb(146, 0, 0);
-							color: white;
+							background-color: rgb(255, 255, 255);
+							color: #333333;
 						}	
 					}
 				}	
@@ -222,6 +231,7 @@ section {
 	}
 
 	overflow: hidden;
+
 	.inner {
 		display: flex;
 		margin: 0 auto;
@@ -233,7 +243,7 @@ section {
 			strong{
 				font-size: 5rem;
 				font-weight: bold;
-				transition: 1s;
+				transition: 0.8s;
 				transform: translateY(100%);
 				opacity: 0%;
 			}
@@ -241,22 +251,21 @@ section {
 				margin: 5% 0;
 				line-height: 1.5;
 				font-size: 1.7rem;
-				transition: 1s;
+				transition: 0.8s;
 				transform: translateY(100%);
 				opacity: 0%;
 			}
 		}
 		.swiper-scrollbar-drag{
 			background-color: rgb(255, 251, 0);
-			width: 70%;
 		}
 		.swiper-scrollbar{
 			margin-left: 30%;
 			width: 76%;
 		}
 		.paginationBox{
-			margin-top: 50%;
-			width: 60%;
+			margin: 50% auto 0 0;
+			width: 50%;
 			position: relative;
 			.swiper-button-next,
 			.swiper-button-prev{
@@ -301,8 +310,7 @@ section {
 					height: 100%;
 					top: 0;
 					left: 0;
-					background-color: black;
-					opacity: 50%;
+					background-color: rgba(0, 0, 0, 0.37);
 					border-radius: 5%;
 				}
 				&.area1{
@@ -372,9 +380,9 @@ section {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		transition: 1s;
+		transition: 0.8s;
 		&::after{
-			transition: 1s;
+			transition: 0.8s;
 			content: "";
 			position: absolute;
 			width: 100%;
@@ -407,7 +415,7 @@ section {
 	.inner{
 		overflow: hidden;
 		.promotion-contents{
-			transition: 1s;
+			transition: 0.8s;
 			transform: translateY(100%);
 			display: flex;
 			justify-content: center;
@@ -504,7 +512,7 @@ section {
 					background-size: cover;
 					background-position: center;
 					transform: translateY(0%);
-					transition: 1s;
+					transition: 0.8s;
 					margin-bottom: 5%;
 					&:hover{
 						transform: translateY(-15%);
@@ -587,11 +595,11 @@ section {
 		> .grid{
 			height: 600px;
 			width: 100%;
-			gap: 30px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
+			gap: 30px;
 
 		> div{
 			background-color: rgb(255, 255, 255);
@@ -642,6 +650,7 @@ section {
 			width: 48.5%;
 			height: 45%;
 			.wInner{
+				overflow: hidden;
 				height: 100%;
 				width: 100%;
 				display: flex;
@@ -652,8 +661,8 @@ section {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 230px;
-					height: 230px;
+					width: 200px;
+					height: 200px;
 					border-radius: 100%;
 					margin: 0 5%;
 					img{
@@ -779,7 +788,7 @@ section {
 						justify-content: center;
 						align-items: start;
 						p{
-							transition: 1s;
+							transition: 0.8s;
 							transform: translateY(100%);
 							opacity: 0%;
 							font-size: 4rem;
@@ -788,7 +797,7 @@ section {
 						}
 						strong{
 							text-align: center;
-							transition: 1s;
+							transition: 0.8s;
 							transform: translateY(100%);
 							opacity: 0%;
 							font-size: 5rem;
@@ -797,7 +806,7 @@ section {
 						}
 						button{
 							opacity: 0%;
-							transition: 1s;
+							transition: 0.8s;
 							width: 200px;
 							font-size:  2rem;
 							border-radius: 30px;
@@ -911,7 +920,7 @@ section {
 				strong{
 					font-size: 5rem;
 					font-weight: bold;
-					transition: 1s;
+					transition: 0.8s;
 					transform: translateY(100%);
 					opacity: 0%;
 					margin: 60px 0;
@@ -920,7 +929,7 @@ section {
 					margin: 5% 0;
 					line-height: 1.5;
 					font-size: 1.7rem;
-					transition: 1s;
+					transition: 0.8s;
 					transform: translateY(100%);
 					opacity: 0%;
 				}
@@ -1052,9 +1061,9 @@ section {
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
-			transition: 1s;
+			transition: 0.8s;
 			&::after{
-				transition: 1s;
+				transition: 0.8s;
 				content: "";
 				position: absolute;
 				width: 100%;
@@ -1088,7 +1097,7 @@ section {
 			padding: 0% 10%;
 			overflow: hidden;
 			.promotion-contents{
-				transition: 1s;
+				transition: 0.8s;
 				transform: translateY(100%);
 				display: flex;
 				justify-content: center;
@@ -1147,7 +1156,6 @@ section {
 	.section4 {
 		overflow: hidden;
 		.inner {
-			padding: 10px;
 			text-align: center;
 			height: 400px;
 			a{
@@ -1185,8 +1193,8 @@ section {
 						background-size: cover;
 						background-position: center;
 						transform: translateY(0%);
-						transition: 1s;
-						margin-bottom: 5%;
+						transition: 0.8s;
+						margin-bottom: 10%;
 						&:hover{
 							transform: translateY(-15%);
 						}
@@ -1386,9 +1394,7 @@ section {
 		}
 		}
 	}
-
 }
-
 
 
 @media (max-width: 768px) {
@@ -1400,6 +1406,7 @@ section {
 	html, body{
 		font-size: 6px !important;
 	}
+	
 
 	.section1 {
 		.swiper {
@@ -1442,7 +1449,7 @@ section {
 						justify-content: center;
 						align-items: start;
 						p{
-							transition: 1s;
+							transition: 0.8s;
 							transform: translateY(100%);
 							opacity: 0%;
 							font-size: 4rem;
@@ -1451,7 +1458,7 @@ section {
 						}
 						strong{
 							text-align: center;
-							transition: 1s;
+							transition: 0.8s;
 							transform: translateY(100%);
 							opacity: 0%;
 							font-size: 5rem;
@@ -1460,7 +1467,7 @@ section {
 						}
 						button{
 							opacity: 0%;
-							transition: 1s;
+							transition: 0.8s;
 							width: 200px;
 							font-size:  2rem;
 							border-radius: 30px;
@@ -1592,16 +1599,17 @@ section {
 				strong{
 					font-size: 5rem;
 					font-weight: bold;
-					transition: 1s;
+					transition: 0.8s;
 					transform: translateY(100%);
 					opacity: 0%;
 					margin: 60px 0;
 				}
 				p{
+					display: none;
 					margin: 5% 0;
 					line-height: 1.5;
 					font-size: 1.7rem;
-					transition: 1s;
+					transition: 0.8s;
 					transform: translateY(100%);
 					opacity: 0%;
 				}
@@ -1722,6 +1730,7 @@ section {
 	}
 
 	.section3 {
+		padding: 15% 0 0 0;
 		.filter{
 			z-index: -1;
 			position: absolute;
@@ -1733,9 +1742,9 @@ section {
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
-			transition: 1s;
+			transition: 0.8s;
 			&::after{
-				transition: 1s;
+				transition: 0.8s;
 				content: "";
 				position: absolute;
 				width: 100%;
@@ -1766,10 +1775,10 @@ section {
 			}
 		}
 		.inner{
-			padding: 0% 10%;
+			padding: 0% 15%;
 			overflow: hidden;
 			.promotion-contents{
-				transition: 1s;
+				transition: 0.8s;
 				transform: translateY(100%);
 				display: flex;
 				justify-content: center;
@@ -1828,7 +1837,6 @@ section {
 	.section4 {
 		overflow: hidden;
 		.inner {
-			padding: 10px;
 			text-align: center;
 			height: 400px;
 			a{
@@ -1866,8 +1874,8 @@ section {
 						background-size: cover;
 						background-position: center;
 						transform: translateY(0%);
-						transition: 1s;
-						margin-bottom: 5%;
+						transition: 0.8s;
+						margin-bottom: 10%;
 						&:hover{
 							transform: translateY(-15%);
 						}
@@ -1908,6 +1916,7 @@ section {
 	}
 	
 	.section5 {
+		padding: 15% 0 0 0;
 		&.active{
 			h2{
 				&.active{
@@ -1962,7 +1971,7 @@ section {
 				border-radius: 20px;
 				width: 100%;
 				display: flex;
-				height: 45%;
+				height: 35%;
 				> figure{
 					display: flex;
 					justify-content: space-evenly;
@@ -1999,7 +2008,7 @@ section {
 			.weather{
 				border-radius: 20px;
 				width: 100%;
-				height: 45%;
+				height: 35%;
 				.wInner{
 					height: 100%;
 					width: 100%;
@@ -2011,8 +2020,8 @@ section {
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						width: 230px;
-						height: 230px;
+						width: 200px;
+						height: 200px;
 						border-radius: 100%;
 						margin: 0 5%;
 						img{
@@ -2046,7 +2055,7 @@ section {
 			.list{
 				border-radius: 20px;
 				width: 100%;
-				height: 45%;
+				height: 35%;
 				background-image: url(../asset/image/main/sec5_youtube.png);
 				background-repeat: no-repeat;
 				background-position: center;
@@ -2056,7 +2065,7 @@ section {
 			.pic{
 				border-radius: 20px;
 				width: 100%;
-				height: 45%;
+				height: 35%;
 				background-image: url(../asset/image/main/sec5_app.png);
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -2068,17 +2077,19 @@ section {
 	
 }
 
+
 @media (max-width: 480px) {
 	.section{
 		h2{
 			margin: 80px 0;
 		}
-	}	
+	}
 	html, body{
 		font-size: 6px !important;
 	}
 
 	.section1 {
+		padding: 15% 10;
 		.swiper {
 			height: 100vh;
 			.swiper-pagination{
@@ -2119,7 +2130,7 @@ section {
 						justify-content: center;
 						align-items: start;
 						p{
-							transition: 1s;
+							transition: 0.8s;
 							transform: translateY(100%);
 							opacity: 0%;
 							font-size: 4rem;
@@ -2128,7 +2139,7 @@ section {
 						}
 						strong{
 							text-align: center;
-							transition: 1s;
+							transition: 0.8s;
 							transform: translateY(100%);
 							opacity: 0%;
 							font-size: 5rem;
@@ -2137,7 +2148,7 @@ section {
 						}
 						button{
 							opacity: 0%;
-							transition: 1s;
+							transition: 0.8s;
 							width: 200px;
 							font-size:  2rem;
 							border-radius: 30px;
@@ -2233,6 +2244,7 @@ section {
 	
 	.section2 {
 		overflow: hidden;
+		padding: 15% 10;
 
 		&.active{
 			.inner{
@@ -2269,16 +2281,17 @@ section {
 				strong{
 					font-size: 5rem;
 					font-weight: bold;
-					transition: 1s;
+					transition: 0.8s;
 					transform: translateY(100%);
 					opacity: 0%;
 					margin: 60px 0;
 				}
 				p{
+					display: none;
 					margin: 5% 0;
 					line-height: 1.5;
 					font-size: 1.7rem;
-					transition: 1s;
+					transition: 0.8s;
 					transform: translateY(100%);
 					opacity: 0%;
 				}
@@ -2399,6 +2412,7 @@ section {
 	}
 
 	.section3 {
+		padding: 15% 10% 0 10%;
 		.filter{
 			z-index: -1;
 			position: absolute;
@@ -2410,9 +2424,9 @@ section {
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
-			transition: 1s;
+			transition: 0.8s;
 			&::after{
-				transition: 1s;
+				transition: 0.8s;
 				content: "";
 				position: absolute;
 				width: 100%;
@@ -2446,7 +2460,7 @@ section {
 			padding: 0% 10%;
 			overflow: hidden;
 			.promotion-contents{
-				transition: 1s;
+				transition: 0.8s;
 				transform: translateY(100%);
 				display: flex;
 				justify-content: center;
@@ -2504,8 +2518,8 @@ section {
 
 	.section4 {
 		overflow: hidden;
+		padding: 15% 0;
 		.inner {
-			padding: 10px;
 			text-align: center;
 			height: 400px;
 			a{
@@ -2521,7 +2535,6 @@ section {
 				overflow: visible;
 				.swiper-wrapper {
 					.swiper-slide {
-						position: relative;
 						&::after{
 							content: "";
 							position: absolute;
@@ -2532,6 +2545,7 @@ section {
 							border-radius: 5%;
 							background-color: rgba(0, 0, 0, 0.39);
 						}
+						position: relative;
 						border-radius: 5%;
 						margin: 30px 0;
 						height: 300px;
@@ -2543,8 +2557,8 @@ section {
 						background-size: cover;
 						background-position: center;
 						transform: translateY(0%);
-						transition: 1s;
-						margin-bottom: 5%;
+						transition: 0.8s;
+						margin-bottom: 10%;
 						&:hover{
 							transform: translateY(-15%);
 						}
@@ -2585,6 +2599,7 @@ section {
 	}
 	
 	.section5 {
+		padding: 15% 0 0 0;
 		&.active{
 			h2{
 				&.active{
@@ -2639,7 +2654,7 @@ section {
 				border-radius: 20px;
 				width: 100%;
 				display: flex;
-				height: 45%;
+				height: 35%;
 				> figure{
 					display: flex;
 					justify-content: space-evenly;
@@ -2676,7 +2691,7 @@ section {
 			.weather{
 				border-radius: 20px;
 				width: 100%;
-				height: 45%;
+				height: 35%;
 				.wInner{
 					height: 100%;
 					width: 100%;
@@ -2723,7 +2738,7 @@ section {
 			.list{
 				border-radius: 20px;
 				width: 100%;
-				height: 45%;
+				height: 35%;
 				background-image: url(../asset/image/main/sec5_youtube.png);
 				background-repeat: no-repeat;
 				background-position: left;
@@ -2733,7 +2748,7 @@ section {
 			.pic{
 				border-radius: 20px;
 				width: 100%;
-				height: 45%;
+				height: 35%;
 				background-image: url(../asset/image/main/sec5_app.png);
 				background-repeat: no-repeat;
 				background-size: cover;

@@ -487,8 +487,12 @@ html {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+.mainTexts > strong {
+  line-height: 1.2;
+}
+
 section h2 {
-  transition: 1s;
+  transition: 0.8s;
   text-align: center;
   margin: 100px auto;
   font-size: 5rem;
@@ -503,7 +507,7 @@ section h2 {
   left: 0;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  transition: 0.55s;
+  transition: 0.8 0.55s;
 }
 #header-section.active {
   background-color: transparent;
@@ -563,7 +567,7 @@ section h2 {
   align-items: start;
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts p {
-  transition: 1s;
+  transition: 0.8s;
   transform: translateY(100%);
   opacity: 0%;
   margin-bottom: 20px;
@@ -571,7 +575,7 @@ section h2 {
   font-weight: 400;
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts strong {
-  transition: 1s;
+  transition: 0.8s;
   transform: translateY(100%);
   opacity: 0%;
   margin-bottom: 80px;
@@ -580,7 +584,7 @@ section h2 {
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts button {
   opacity: 0%;
-  transition: 1s;
+  transition: 0.8s;
   width: 200px;
   font-size: 2rem;
   border-radius: 30px;
@@ -596,7 +600,8 @@ section h2 {
   color: white;
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts.text1 button {
-  background-color: rgb(238, 238, 238);
+  color: #333333;
+  background-color: rgb(255, 255, 255);
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts.text2 p {
   color: rgb(0, 0, 0);
@@ -605,8 +610,8 @@ section h2 {
   color: rgb(0, 0, 0);
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts.text2 button {
-  background-color: rgb(0, 105, 9);
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: #333333;
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts.text3 p {
   color: white;
@@ -615,7 +620,8 @@ section h2 {
   color: white;
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts.text3 button {
-  background-color: rgb(255, 187, 255);
+  color: #333333;
+  background-color: rgb(255, 255, 255);
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts.text4 p {
   color: white;
@@ -624,8 +630,8 @@ section h2 {
   color: white;
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts.text4 button {
-  background-color: rgb(146, 0, 0);
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: #333333;
 }
 .section1 .swiper .swiper-wrapper .swiper-slide .area_img {
   display: inline-block;
@@ -657,7 +663,7 @@ section h2 {
 .section2 .inner .main_title strong {
   font-size: 5rem;
   font-weight: bold;
-  transition: 1s;
+  transition: 0.8s;
   transform: translateY(100%);
   opacity: 0%;
 }
@@ -665,21 +671,20 @@ section h2 {
   margin: 5% 0;
   line-height: 1.5;
   font-size: 1.7rem;
-  transition: 1s;
+  transition: 0.8s;
   transform: translateY(100%);
   opacity: 0%;
 }
 .section2 .inner .swiper-scrollbar-drag {
   background-color: rgb(255, 251, 0);
-  width: 70%;
 }
 .section2 .inner .swiper-scrollbar {
   margin-left: 30%;
   width: 76%;
 }
 .section2 .inner .paginationBox {
-  margin-top: 50%;
-  width: 60%;
+  margin: 50% auto 0 0;
+  width: 50%;
   position: relative;
 }
 .section2 .inner .paginationBox .swiper-button-next,
@@ -724,8 +729,7 @@ section h2 {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: black;
-  opacity: 50%;
+  background-color: rgba(0, 0, 0, 0.37);
   border-radius: 5%;
 }
 .section2 .swiper .swiper-wrapper .swiper-slide.area1 {
@@ -788,10 +792,10 @@ section h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transition: 1s;
+  transition: 0.8s;
 }
 .section3 .filter::after {
-  transition: 1s;
+  transition: 0.8s;
   content: "";
   position: absolute;
   width: 100%;
@@ -810,7 +814,7 @@ section h2 {
   overflow: hidden;
 }
 .section3 .inner .promotion-contents {
-  transition: 1s;
+  transition: 0.8s;
   transform: translateY(100%);
   display: flex;
   justify-content: center;
@@ -893,7 +897,7 @@ section h2 {
   background-size: cover;
   background-position: center;
   transform: translateY(0%);
-  transition: 1s;
+  transition: 0.8s;
   margin-bottom: 5%;
 }
 .section4 .inner .swiper .swiper-wrapper .swiper-slide::after {
@@ -974,11 +978,11 @@ section h2 {
 .section5 .inner > .grid {
   height: 600px;
   width: 100%;
-  gap: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .section5 .inner > .grid > div {
   background-color: rgb(255, 255, 255);
@@ -1026,6 +1030,7 @@ section h2 {
   height: 45%;
 }
 .section5 .inner > .grid .weather .wInner {
+  overflow: hidden;
   height: 100%;
   width: 100%;
   display: flex;
@@ -1037,8 +1042,8 @@ section h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   margin: 0 5%;
 }
@@ -1140,7 +1145,7 @@ section h2 {
     align-items: start;
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts p {
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     font-size: 4rem;
@@ -1149,7 +1154,7 @@ section h2 {
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts strong {
     text-align: center;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     font-size: 5rem;
@@ -1158,7 +1163,7 @@ section h2 {
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts button {
     opacity: 0%;
-    transition: 1s;
+    transition: 0.8s;
     width: 200px;
     font-size: 2rem;
     border-radius: 30px;
@@ -1243,7 +1248,7 @@ section h2 {
   .section2 .inner .main_title strong {
     font-size: 5rem;
     font-weight: bold;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     margin: 60px 0;
@@ -1252,7 +1257,7 @@ section h2 {
     margin: 5% 0;
     line-height: 1.5;
     font-size: 1.7rem;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
   }
@@ -1352,10 +1357,10 @@ section h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: 1s;
+    transition: 0.8s;
   }
   .section3 .filter::after {
-    transition: 1s;
+    transition: 0.8s;
     content: "";
     position: absolute;
     width: 100%;
@@ -1375,7 +1380,7 @@ section h2 {
     overflow: hidden;
   }
   .section3 .inner .promotion-contents {
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     display: flex;
     justify-content: center;
@@ -1430,7 +1435,6 @@ section h2 {
     overflow: hidden;
   }
   .section4 .inner {
-    padding: 10px;
     text-align: center;
     height: 400px;
   }
@@ -1458,8 +1462,8 @@ section h2 {
     background-size: cover;
     background-position: center;
     transform: translateY(0%);
-    transition: 1s;
-    margin-bottom: 5%;
+    transition: 0.8s;
+    margin-bottom: 10%;
   }
   .section4 .inner .swiper .swiper-wrapper .swiper-slide::after {
     content: "";
@@ -1694,7 +1698,7 @@ section h2 {
     align-items: start;
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts p {
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     font-size: 4rem;
@@ -1703,7 +1707,7 @@ section h2 {
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts strong {
     text-align: center;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     font-size: 5rem;
@@ -1712,7 +1716,7 @@ section h2 {
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts button {
     opacity: 0%;
-    transition: 1s;
+    transition: 0.8s;
     width: 200px;
     font-size: 2rem;
     border-radius: 30px;
@@ -1808,16 +1812,17 @@ section h2 {
   .section2 .inner .main_title strong {
     font-size: 5rem;
     font-weight: bold;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     margin: 60px 0;
   }
   .section2 .inner .main_title p {
+    display: none;
     margin: 5% 0;
     line-height: 1.5;
     font-size: 1.7rem;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
   }
@@ -1906,6 +1911,9 @@ section h2 {
   .section2 .swiper .swiper-wrapper .swiper-slide.area8 {
     background-image: url(../asset/image/main/main_sec2_content8.png);
   }
+  .section3 {
+    padding: 15% 0 0 0;
+  }
   .section3 .filter {
     z-index: -1;
     position: absolute;
@@ -1917,10 +1925,10 @@ section h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: 1s;
+    transition: 0.8s;
   }
   .section3 .filter::after {
-    transition: 1s;
+    transition: 0.8s;
     content: "";
     position: absolute;
     width: 100%;
@@ -1936,11 +1944,11 @@ section h2 {
     transform: translateY(0%);
   }
   .section3 .inner {
-    padding: 0% 10%;
+    padding: 0% 15%;
     overflow: hidden;
   }
   .section3 .inner .promotion-contents {
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     display: flex;
     justify-content: center;
@@ -1995,7 +2003,6 @@ section h2 {
     overflow: hidden;
   }
   .section4 .inner {
-    padding: 10px;
     text-align: center;
     height: 400px;
   }
@@ -2023,8 +2030,8 @@ section h2 {
     background-size: cover;
     background-position: center;
     transform: translateY(0%);
-    transition: 1s;
-    margin-bottom: 5%;
+    transition: 0.8s;
+    margin-bottom: 10%;
   }
   .section4 .inner .swiper .swiper-wrapper .swiper-slide::after {
     content: "";
@@ -2068,6 +2075,9 @@ section h2 {
   }
   .section4 .inner .swiper .swiper-wrapper .swiper-slide.att8 {
     background-image: url(../asset/image/enjoy/ENJOY_view08.jpg);
+  }
+  .section5 {
+    padding: 15% 0 0 0;
   }
   .section5.active h2.active {
     color: white;
@@ -2116,7 +2126,7 @@ section h2 {
     border-radius: 20px;
     width: 100%;
     display: flex;
-    height: 45%;
+    height: 35%;
   }
   .section5 .inner > .grid .info > figure {
     display: flex;
@@ -2150,7 +2160,7 @@ section h2 {
   .section5 .inner > .grid .weather {
     border-radius: 20px;
     width: 100%;
-    height: 45%;
+    height: 35%;
   }
   .section5 .inner > .grid .weather .wInner {
     height: 100%;
@@ -2164,8 +2174,8 @@ section h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     margin: 0 5%;
   }
@@ -2195,7 +2205,7 @@ section h2 {
   .section5 .inner > .grid .list {
     border-radius: 20px;
     width: 100%;
-    height: 45%;
+    height: 35%;
     background-image: url(../asset/image/main/sec5_youtube.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -2204,7 +2214,7 @@ section h2 {
   .section5 .inner > .grid .pic {
     border-radius: 20px;
     width: 100%;
-    height: 45%;
+    height: 35%;
     background-image: url(../asset/image/main/sec5_app.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2217,6 +2227,9 @@ section h2 {
   }
   html, body {
     font-size: 6px !important;
+  }
+  .section1 {
+    padding: 15% 10;
   }
   .section1 .swiper {
     height: 100vh;
@@ -2257,7 +2270,7 @@ section h2 {
     align-items: start;
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts p {
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     font-size: 4rem;
@@ -2266,7 +2279,7 @@ section h2 {
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts strong {
     text-align: center;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     font-size: 5rem;
@@ -2275,7 +2288,7 @@ section h2 {
   }
   .section1 .swiper .swiper-wrapper .swiper-slide .mainTexts button {
     opacity: 0%;
-    transition: 1s;
+    transition: 0.8s;
     width: 200px;
     font-size: 2rem;
     border-radius: 30px;
@@ -2342,6 +2355,7 @@ section h2 {
   }
   .section2 {
     overflow: hidden;
+    padding: 15% 10;
   }
   .section2.active .inner .main_title.active strong {
     transform: translateY(0%);
@@ -2371,16 +2385,17 @@ section h2 {
   .section2 .inner .main_title strong {
     font-size: 5rem;
     font-weight: bold;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
     margin: 60px 0;
   }
   .section2 .inner .main_title p {
+    display: none;
     margin: 5% 0;
     line-height: 1.5;
     font-size: 1.7rem;
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     opacity: 0%;
   }
@@ -2469,6 +2484,9 @@ section h2 {
   .section2 .swiper .swiper-wrapper .swiper-slide.area8 {
     background-image: url(../asset/image/main/main_sec2_content8.png);
   }
+  .section3 {
+    padding: 15% 10% 0 10%;
+  }
   .section3 .filter {
     z-index: -1;
     position: absolute;
@@ -2480,10 +2498,10 @@ section h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: 1s;
+    transition: 0.8s;
   }
   .section3 .filter::after {
-    transition: 1s;
+    transition: 0.8s;
     content: "";
     position: absolute;
     width: 100%;
@@ -2503,7 +2521,7 @@ section h2 {
     overflow: hidden;
   }
   .section3 .inner .promotion-contents {
-    transition: 1s;
+    transition: 0.8s;
     transform: translateY(100%);
     display: flex;
     justify-content: center;
@@ -2556,9 +2574,9 @@ section h2 {
   }
   .section4 {
     overflow: hidden;
+    padding: 15% 0;
   }
   .section4 .inner {
-    padding: 10px;
     text-align: center;
     height: 400px;
   }
@@ -2586,8 +2604,8 @@ section h2 {
     background-size: cover;
     background-position: center;
     transform: translateY(0%);
-    transition: 1s;
-    margin-bottom: 5%;
+    transition: 0.8s;
+    margin-bottom: 10%;
   }
   .section4 .inner .swiper .swiper-wrapper .swiper-slide::after {
     content: "";
@@ -2631,6 +2649,9 @@ section h2 {
   }
   .section4 .inner .swiper .swiper-wrapper .swiper-slide.att8 {
     background-image: url(../asset/image/enjoy/ENJOY_view08.jpg);
+  }
+  .section5 {
+    padding: 15% 0 0 0;
   }
   .section5.active h2.active {
     color: white;
@@ -2679,7 +2700,7 @@ section h2 {
     border-radius: 20px;
     width: 100%;
     display: flex;
-    height: 45%;
+    height: 35%;
   }
   .section5 .inner > .grid .info > figure {
     display: flex;
@@ -2713,7 +2734,7 @@ section h2 {
   .section5 .inner > .grid .weather {
     border-radius: 20px;
     width: 100%;
-    height: 45%;
+    height: 35%;
   }
   .section5 .inner > .grid .weather .wInner {
     height: 100%;
@@ -2758,7 +2779,7 @@ section h2 {
   .section5 .inner > .grid .list {
     border-radius: 20px;
     width: 100%;
-    height: 45%;
+    height: 35%;
     background-image: url(../asset/image/main/sec5_youtube.png);
     background-repeat: no-repeat;
     background-position: left;
@@ -2767,7 +2788,7 @@ section h2 {
   .section5 .inner > .grid .pic {
     border-radius: 20px;
     width: 100%;
-    height: 45%;
+    height: 35%;
     background-image: url(../asset/image/main/sec5_app.png);
     background-repeat: no-repeat;
     background-size: cover;

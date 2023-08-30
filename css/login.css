@@ -481,18 +481,90 @@ input:focus, textarea:focus {
   display: none;
 }
 
-.loginBox {
-  height: 300px;
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+body main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-
-.gLoginBttn {
-  background-color: rgb(0, 119, 255);
-  margin-top: 100px;
-  padding: 10px 50px;
-  font-size: 2rem;
+body main .loginSec1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 8% 0;
+}
+body main .loginSec1 .loginTitle {
+  font-size: 2.25rem;
+  margin-bottom: 10%;
+}
+body main .loginSec1 .Bttns .kLoginBttn {
+  padding: 15px 0;
+  margin-bottom: 10px;
+  background-color: #ffeb00;
+  font-size: 1.55rem;
   border-radius: 10px;
+  height: 54.58px;
+  width: 350px;
+}
+body main .loginSec1 .Bttns .kLoginBttn #kakao-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+body main .loginSec1 .Bttns .kLoginBttn #kakao-login-btn p {
+  font-weight: bold;
+  margin-left: 15%;
+}
+body main .loginSec1 .Bttns .kLoginBttn #kakao-login-btn img {
+  width: 10%;
+}
+body main .loginSec1 .Bttns .gLoginBttn {
+  padding: 15px 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #333333;
+  font-size: 1.55rem;
+  border-radius: 10px;
+  height: 54.58px;
+  width: 350px;
+}
+body main .loginSec1 .Bttns .gLoginBttn #GgCustomLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+body main .loginSec1 .Bttns .gLoginBttn #GgCustomLogin p {
+  font-weight: bold;
+  margin-left: 15%;
+}
+body main .loginSec1 .Bttns .gLoginBttn #GgCustomLogin img {
+  width: 10%;
+}
+body main .btwLine {
+  width: 700px;
+  border: 1px solid rgba(0, 0, 0, 0.349);
+}
+body main .loginSec2 {
+  text-align: center;
+  margin: 3% 0;
+}
+body main .loginSec2 p:nth-of-type(1) {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+body main .loginSec2 p:nth-of-type(2) {
+  font-size: 1.2rem;
+  margin-bottom: 3%;
+  line-height: 2;
+}
+body main .loginSec2 p b {
+  color: orange;
 }
